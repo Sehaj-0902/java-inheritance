@@ -29,7 +29,7 @@ class Car extends Vehicle {
         this.seatCapacity = seatCapacity;
     }
 
-    // method to display car details
+    // Method to display car details
     @Override
     public void displayDetails() {
         System.out.println("Car Details:");
@@ -85,15 +85,17 @@ class Motorcycle extends  Vehicle {
 
 public class VehicleTransportSystem {
     public static void main(String[] args) {
-        // Creating objects of subclasses
-        Vehicle car = new Car(140, "Petrol", 5);
-        Vehicle truck = new Truck(80, "Diesel", 400);
-        Vehicle motorcycle = new Motorcycle(300, "Petrol", "2024");
+        Vehicle[] vehicles = new Vehicle[3];
 
-        // Calling displayDetails() method to display details
-        car.displayDetails();
-        truck.displayDetails();
-        motorcycle.displayDetails();
+        // Storing objects of subclasses in array
+        vehicles[0] = new Car(140, "Petrol", 5);
+        vehicles[1] = new Truck(80, "Diesel", 400);
+        vehicles[2] = new Motorcycle(300, "Petrol", "2024");
+
+        // Calling displayDetails() method dynamically
+        for (Vehicle vehicle : vehicles) {
+            vehicle.displayDetails();
+        }
     }
 }
 

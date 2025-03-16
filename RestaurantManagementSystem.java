@@ -75,7 +75,7 @@ class Waiter extends Person implements Worker {
 
 public class RestaurantManagementSystem {
     public static void main(String[] args) {
-        Chef chef = new Chef("Alice", 101, "Patisser");
+        Chef chef = new Chef("Alice", 101, "Baking");
         System.out.println("Chef Details:");
         chef.displayChefDetails();
         chef.performDuties();
@@ -92,7 +92,7 @@ Output:
     Chef Details:
     Name: Alice
     ID: 101
-    Speciality: Patisser
+    Speciality: Baking
     Duties: Food Preparation, Recipe Development, Menu Planning
 
     Waiter Details:
